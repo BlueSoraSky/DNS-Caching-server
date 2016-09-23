@@ -30,7 +30,7 @@ def install_pdnsd():
 		print install_info[1]
 def get_conf():
 	cmd('wget https://raw.githubusercontent.com/zyqf/DNS-Caching-server/master/pdnsd.conf && mv -f pdnsd.conf %s'%conf_dir)
-	cmd('wget https://raw.githubusercontent.com/zyqf/hosts/master/hosts && mv hosts /etc/hosts')
+	cmd('wget https://raw.githubusercontent.com/zyqf/hosts/master/hosts && mv hosts /home/hosts')
 	cmd('service pdnsd start && chkconfig pdnsd on')
 
 def add_cron():
